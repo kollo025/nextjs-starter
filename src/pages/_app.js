@@ -4,7 +4,7 @@ import { ClerkProvider } from '@clerk/nextjs';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ClerkProvider {...pageProps} >
+    <ClerkProvider publishableKey="pk_test_d29ya2luZy1wcmltYXRlLTM3LmNsZXJrLmFjY291bnRzLmRldiQ" {...pageProps} >
       <Component {...pageProps} />
     </ClerkProvider>
   );
