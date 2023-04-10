@@ -1,11 +1,13 @@
 import '@/styles/globals.css'
+import { ClerkProvider } from '@clerk/nextjs';
 
-export default function App({ Component, pageProps }) {
-  return <>
-    <Component {...pageProps} />
-  </>
 
-  // routes function
-  // metadata 
-  // convention based routing - no explicit routing preference - routing based off names
+function MyApp({ Component, pageProps }) {
+  return (
+    <ClerkProvider {...pageProps} >
+      <Component {...pageProps} />
+    </ClerkProvider>
+  );
 }
+
+export default MyApp;
